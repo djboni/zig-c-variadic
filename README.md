@@ -10,6 +10,11 @@ Zig v0.10.1
 We expect that these tests should pass.
 
 ```console
-$ zig build test
+$ zig cc src/main.c src/source.c -Isrc -o main && ./main
+OK
+```
+
+```console
+$ zig test src/main.zig src/source.c -Isrc
 1 passed; 0 skipped; 1 failed.
 ```
